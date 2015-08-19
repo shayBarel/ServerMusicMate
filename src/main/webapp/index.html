@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+
+    <title>SoundMate Server</title>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body>
+    <div class="body-container">
+
+    </div>
+
+	<h1 id="abc"> SoundMate simple server Test </h1>
+	<div>
+		
+	</div>
+	<input id="def" type="submit" value="Click Me !" class='button'></input>
+	
+	    <script>
+    
+    $('.button').click(function(){
+    $.ajax({
+		  url: 'service?name=Shay'
+		}).done(function(result) {
+			
+			str1 = '<img id="eee" src="SoundMates.jpg"';
+			str2 = 'alt="SoundMatesTeam">';
+			
+			$('#abc').text("");
+			$('#abc').append('<h1 id="ooo"> The server is Working ! </h1>');
+			$('#abc').append(str1+str2);
+			$('#def').remove();
+			
+	});	
+	
+	
+	
+});
+    </script>
+</body>
+
+</html>

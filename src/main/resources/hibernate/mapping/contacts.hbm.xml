@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC  "-//Hiberanate/Hiberanate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping >
+
+<class table="contacts" lazy="false" name="FirstScheme.contacts">
+
+<id column="id" type="int" name="id">
+<generator class="increment"/>
+
+
+</id>
+
+<property name="fname" type="string" column="fname"/>
+<property name="lname" type="string" column="lname"/>
+
+
+
+</class>
+
+
+
+</hibernate-mapping>
