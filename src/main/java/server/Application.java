@@ -10,7 +10,7 @@ import FirstScheme.CrudsOps;
 public class Application {
 
     public static void main(String[] args) {
-    	CrudsOps.main(args);
+    	//CrudsOps.main(args);
         SpringApplication.run(Application.class, args);
     }
 }

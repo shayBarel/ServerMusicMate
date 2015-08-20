@@ -11,7 +11,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import FirstScheme.CrudsOps;
+import FirstScheme.contacts;
 
+import java.util.Date;
+
+import org.hibernate.Session;
 @RestController
 public class Controller {
 	@RequestMapping(value="/service",params = { "id", "fname","lname" })
@@ -19,8 +24,26 @@ public class Controller {
 	
 	
 	@ResponseBody
-	public String getBarBySimplePathWithExplicitRequestParams(@RequestParam("id") long id) {
-	    return "Narrow Get a specific Bar with id=" + id;
+	public String getBarBySimplePathWithExplicitRequestParams(@RequestParam("id") long id
+,@RequestParam("fname") String fname,@RequestParam("lname") String lname) {
+		
+		contacts user = new contacts();
+
+		SessionFactory sf = new Configuration().configure().buildSessionFactory();
+		System.out.println("Configuration Loaded successfully");
+		Session session = sf.openSession();
+		session.beginTransaction();
+		System.out.println("Transaction began");
+		
+		 user.setId((int)id);
+		 user.setFname(fname);
+		 user.setLname(lname);
+
+
+		 session.save(user);
+		 session.getTransaction().commit();
+		
+	    return "The id have been added to DB=" + id;
 	}
 	
 	
