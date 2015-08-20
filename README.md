@@ -1,4 +1,4 @@
-# Databases Project, 2015b
+# Server 
 
 ###Prerequisites:
 Maven,Git
@@ -6,7 +6,7 @@ Maven,Git
 ###Instructions:
 
 #####0. Clone Project:
-  1. *`git clone https://github.com/amirbar/Databases15bFinalProj.git`*
+  1. *`https://github.com/shayBarel/ServerMusicMate.git`*
 
 #####1. Compilation:
   From within Repository:
