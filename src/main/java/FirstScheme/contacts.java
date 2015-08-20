@@ -5,6 +5,7 @@ public class contacts {
 	int id;
 	String fname;
 	String lname;
+	//checks if works
 	
 	
 	public int getId() {
